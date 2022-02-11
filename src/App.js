@@ -12,7 +12,7 @@ class App extends Component {
       id: 0,
       employeeName: "",
       employeeDepartment: "",
-      employeeEmail: ""
+      employeeEmail: "",
     };
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
         id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
         employeeName: this.state.employeeName,
         employeeDepartment: this.state.employeeDepartment,
-        employeeEmail: this.state.employeeEmail
+        employeeEmail: this.state.employeeEmail,
       };
 
       this.props.addEmployee(newEmployee);
@@ -43,7 +43,7 @@ class App extends Component {
         id: this.state.id,
         employeeName: this.state.employeeName,
         employeeDepartment: this.state.employeeDepartment,
-        employeeEmail: this.state.employeeEmail
+        employeeEmail: this.state.employeeEmail,
       };
 
       this.props.editEmployee(updatedDetails);
@@ -59,7 +59,7 @@ class App extends Component {
       id: data.id,
       employeeName: data.employeeName,
       employeeDepartment: data.employeeDepartment,
-      employeeEmail: data.employeeEmail
+      employeeEmail: data.employeeEmail,
     })
   }
 
@@ -82,7 +82,7 @@ class App extends Component {
     });
   }
 
-  handleEmailChange =(e) => {
+  handleEmailChange = (e) => {
     this.setState({
       employeeEmail: e.target.value
     });
@@ -93,7 +93,8 @@ class App extends Component {
     this.setState({
       id: 0,
       employeeName: "",
-      employeeDepartment: ""
+      employeeDepartment: "",
+      employeeEmail: "",
     });
   }
 
